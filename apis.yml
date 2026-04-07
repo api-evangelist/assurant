@@ -1,16 +1,14 @@
 aid: assurant
-url: 
-  https://raw.githubusercontent.com/api-evangelist/assurant/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/assurant/refs/heads/main/apis.yml
 apis:
   - aid: assurant:apex-insurance-api
     name: Assurant APEX Embedded Insurance API
     tags:
-      - Insurance
-      - Embedded Insurance
       - Claims
       - Device Protection
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+      - Embedded Insurance
+      - Insurance
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api-prod.portal.assurant.com
     humanURL: https://www.assurant.com/partner-with-us/apex
     properties:
@@ -30,12 +28,11 @@ apis:
   - aid: assurant:global-housing-api
     name: Assurant Global Housing API
     tags:
-      - Insurance
       - Housing
+      - Insurance
       - Property
       - Renters Insurance
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://housing-apis.developer.assurant.com
     humanURL: https://www.assurant.com/partner-with-us/apex/global-housing
     properties:

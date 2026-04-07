@@ -18,14 +18,14 @@ servers:
   - url: https://api-prod.portal.assurant.com
     description: Production
 tags:
-  - name: Policies
-    description: Insurance policy management
   - name: Claims
     description: Claims filing and management
-  - name: Products
-    description: Insurance product catalog
   - name: Enrollments
     description: Customer enrollment operations
+  - name: Policies
+    description: Insurance policy management
+  - name: Products
+    description: Insurance product catalog
 security:
   - apiKeyAuth: []
 paths:
