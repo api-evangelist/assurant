@@ -1,0 +1,218 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Assurant APEX Embedded Insurance API
+  description: The Assurant APEX (Assurant Product Experience Exchange) platform provides embedded insurance APIs that enable
+    partners to integrate protection products, claims management, and diagnostics into their workflows. The scalable API platform
+    supports 99.95% uptime and covers multiple product lines across various industries.
+  tags:
+  - Assurant
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: assurant
+    baseUri: https://api-prod.portal.assurant.com
+    description: Assurant APEX Embedded Insurance API HTTP API.
+    authentication:
+      type: apikey
+      in: header
+      name: X-API-Key
+      value: '{{ASSURANT_TOKEN}}'
+    resources:
+    - name: products
+      path: /products
+      operations:
+      - name: listproducts
+        method: GET
+        description: List insurance products
+        inputParameters:
+        - name: category
+          in: query
+          type: string
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: enrollments
+      path: /enrollments
+      operations:
+      - name: createenrollment
+        method: POST
+        description: Create enrollment
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: claims
+      path: /claims
+      operations:
+      - name: fileclaim
+        method: POST
+        description: File a claim
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: claims-claimid
+      path: /claims/{claimId}
+      operations:
+      - name: getclaim
+        method: GET
+        description: Get claim status
+        inputParameters:
+        - name: claimId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: policies
+      path: /policies
+      operations:
+      - name: listpolicies
+        method: GET
+        description: List policies
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: assurant-rest
+    description: REST adapter for Assurant APEX Embedded Insurance API.
+    resources:
+    - path: /products
+      name: listproducts
+      operations:
+      - method: GET
+        name: listproducts
+        description: List insurance products
+        call: assurant.listproducts
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /enrollments
+      name: createenrollment
+      operations:
+      - method: POST
+        name: createenrollment
+        description: Create enrollment
+        call: assurant.createenrollment
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /claims
+      name: fileclaim
+      operations:
+      - method: POST
+        name: fileclaim
+        description: File a claim
+        call: assurant.fileclaim
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /claims/{claimId}
+      name: getclaim
+      operations:
+      - method: GET
+        name: getclaim
+        description: Get claim status
+        call: assurant.getclaim
+        with:
+          claimId: rest.claimId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /policies
+      name: listpolicies
+      operations:
+      - method: GET
+        name: listpolicies
+        description: List policies
+        call: assurant.listpolicies
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: assurant-mcp
+    transport: http
+    description: MCP adapter for Assurant APEX Embedded Insurance API for AI agent use.
+    tools:
+    - name: listproducts
+      description: List insurance products
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: assurant.listproducts
+      with:
+        category: tools.category
+      inputParameters:
+      - name: category
+        type: string
+        description: category
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createenrollment
+      description: Create enrollment
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: assurant.createenrollment
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: fileclaim
+      description: File a claim
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: assurant.fileclaim
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getclaim
+      description: Get claim status
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: assurant.getclaim
+      with:
+        claimId: tools.claimId
+      inputParameters:
+      - name: claimId
+        type: string
+        description: claimId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listpolicies
+      description: List policies
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: assurant.listpolicies
+      outputParameters:
+      - type: object
+        mapping: $.
+binds:
+- namespace: env
+  keys:
+    ASSURANT_TOKEN: ASSURANT_TOKEN
