@@ -1,0 +1,80 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Assurant APEX Embedded Insurance API — Products
+  description: 'Assurant APEX Embedded Insurance API — Products. 1 operations. Lead operation: List insurance products. Self-contained
+    Naftiko capability covering one Assurant business surface.'
+  tags:
+  - Assurant
+  - Products
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    ASSURANT_API_KEY: ASSURANT_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: apex-insurance-products
+    baseUri: https://api-prod.portal.assurant.com
+    description: Assurant APEX Embedded Insurance API — Products business capability. Self-contained, no shared references.
+    resources:
+    - name: products
+      path: /products
+      operations:
+      - name: listproducts
+        method: GET
+        description: List insurance products
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: category
+          in: query
+          type: string
+    authentication:
+      type: apikey
+      key: X-API-Key
+      value: '{{env.ASSURANT_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: apex-insurance-products-rest
+    port: 8080
+    description: REST adapter for Assurant APEX Embedded Insurance API — Products. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/products
+      name: products
+      description: REST surface for products.
+      operations:
+      - method: GET
+        name: listproducts
+        description: List insurance products
+        call: apex-insurance-products.listproducts
+        with:
+          category: rest.category
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: apex-insurance-products-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Assurant APEX Embedded Insurance API — Products. One tool per consumed operation, routed
+      inline through this capability's consumes block.
+    tools:
+    - name: list-insurance-products
+      description: List insurance products
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: apex-insurance-products.listproducts
+      with:
+        category: tools.category
+      outputParameters:
+      - type: object
+        mapping: $.
