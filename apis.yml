@@ -67,7 +67,7 @@ common:
   - type: Portal
     url: https://www.assurant.com/partner-with-us/apex
     title: APEX Partner Platform
-  - type: SignUp
+  - type: Signup
     url: https://www.assurant.com/partner-with-us/apex
     title: Partner with Assurant
   - type: Features
