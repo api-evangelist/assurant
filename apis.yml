@@ -57,6 +57,10 @@ apis:
       - type: Documentation
         url: https://www.assurant.com/partner-with-us/apex/global-housing
 common:
+  - type: DomainSecurity
+    url: security/assurant-domain-security.yml
+  - type: Authentication
+    url: authentication/assurant-authentication.yml
   - type: GitHubOrganization
     url: https://github.com/assurantlabs
   - type: LinkedIn
