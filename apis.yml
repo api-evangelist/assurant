@@ -57,6 +57,8 @@ apis:
       - type: Documentation
         url: https://www.assurant.com/partner-with-us/apex/global-housing
 common:
+  - type: AgenticAccess
+    url: agentic-access/assurant-agentic-access.yml
   - type: DomainSecurity
     url: security/assurant-domain-security.yml
   - type: Authentication
