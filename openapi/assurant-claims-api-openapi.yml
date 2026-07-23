@@ -1,0 +1,104 @@
+openapi: 3.1.0
+info:
+  title: Assurant APEX Embedded Insurance Claims API
+  description: The Assurant APEX (Assurant Product Experience Exchange) platform provides embedded insurance APIs that enable partners to integrate protection products, claims management, and diagnostics into their workflows. The scalable API platform supports 99.95% uptime and covers multiple product lines across various industries.
+  version: '2026-01-01'
+  contact:
+    name: Assurant Developer Portal
+    url: https://api-prod.portal.assurant.com
+servers:
+- url: https://api-prod.portal.assurant.com
+  description: Production
+security:
+- apiKeyAuth: []
+tags:
+- name: Claims
+  description: Claims filing and management
+paths:
+  /claims:
+    post:
+      operationId: fileClaim
+      summary: File a claim
+      description: Submit a new insurance claim.
+      tags:
+      - Claims
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ClaimRequest'
+      responses:
+        '201':
+          description: Claim filed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Claim'
+        '400':
+          description: Bad request
+  /claims/{claimId}:
+    get:
+      operationId: getClaim
+      summary: Get claim status
+      description: Retrieve the status and details of an existing claim.
+      tags:
+      - Claims
+      parameters:
+      - name: claimId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Claim'
+        '404':
+          description: Claim not found
+components:
+  schemas:
+    Claim:
+      type: object
+      properties:
+        claimId:
+          type: string
+        policyId:
+          type: string
+        status:
+          type: string
+          enum:
+          - submitted
+          - under_review
+          - approved
+          - denied
+          - paid
+        description:
+          type: string
+        filedDate:
+          type: string
+          format: date
+    ClaimRequest:
+      type: object
+      required:
+      - policyId
+      - description
+      properties:
+        policyId:
+          type: string
+        description:
+          type: string
+        incidentDate:
+          type: string
+          format: date
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+externalDocs:
+  description: Assurant APEX Documentation
+  url: https://www.assurant.com/partner-with-us/apex

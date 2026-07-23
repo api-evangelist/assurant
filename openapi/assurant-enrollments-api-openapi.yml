@@ -1,0 +1,76 @@
+openapi: 3.1.0
+info:
+  title: Assurant APEX Embedded Insurance Claims Enrollments API
+  description: The Assurant APEX (Assurant Product Experience Exchange) platform provides embedded insurance APIs that enable partners to integrate protection products, claims management, and diagnostics into their workflows. The scalable API platform supports 99.95% uptime and covers multiple product lines across various industries.
+  version: '2026-01-01'
+  contact:
+    name: Assurant Developer Portal
+    url: https://api-prod.portal.assurant.com
+servers:
+- url: https://api-prod.portal.assurant.com
+  description: Production
+security:
+- apiKeyAuth: []
+tags:
+- name: Enrollments
+  description: Customer enrollment operations
+paths:
+  /enrollments:
+    post:
+      operationId: createEnrollment
+      summary: Create enrollment
+      description: Enroll a customer in an insurance or protection product.
+      tags:
+      - Enrollments
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EnrollmentRequest'
+      responses:
+        '201':
+          description: Enrollment created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Enrollment'
+        '400':
+          description: Bad request
+components:
+  schemas:
+    EnrollmentRequest:
+      type: object
+      required:
+      - productId
+      - customerId
+      properties:
+        productId:
+          type: string
+        customerId:
+          type: string
+        effectiveDate:
+          type: string
+          format: date
+    Enrollment:
+      type: object
+      properties:
+        enrollmentId:
+          type: string
+        productId:
+          type: string
+        customerId:
+          type: string
+        status:
+          type: string
+        effectiveDate:
+          type: string
+          format: date
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+externalDocs:
+  description: Assurant APEX Documentation
+  url: https://www.assurant.com/partner-with-us/apex

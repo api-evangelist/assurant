@@ -1,0 +1,67 @@
+openapi: 3.1.0
+info:
+  title: Assurant APEX Embedded Insurance Claims Policies API
+  description: The Assurant APEX (Assurant Product Experience Exchange) platform provides embedded insurance APIs that enable partners to integrate protection products, claims management, and diagnostics into their workflows. The scalable API platform supports 99.95% uptime and covers multiple product lines across various industries.
+  version: '2026-01-01'
+  contact:
+    name: Assurant Developer Portal
+    url: https://api-prod.portal.assurant.com
+servers:
+- url: https://api-prod.portal.assurant.com
+  description: Production
+security:
+- apiKeyAuth: []
+tags:
+- name: Policies
+  description: Insurance policy management
+paths:
+  /policies:
+    get:
+      operationId: listPolicies
+      summary: List policies
+      description: Retrieve a list of insurance policies.
+      tags:
+      - Policies
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  policies:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Policy'
+components:
+  schemas:
+    Policy:
+      type: object
+      properties:
+        policyId:
+          type: string
+        productId:
+          type: string
+        customerId:
+          type: string
+        status:
+          type: string
+          enum:
+          - active
+          - cancelled
+          - expired
+        effectiveDate:
+          type: string
+          format: date
+        expirationDate:
+          type: string
+          format: date
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+externalDocs:
+  description: Assurant APEX Documentation
+  url: https://www.assurant.com/partner-with-us/apex
