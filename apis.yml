@@ -9,7 +9,20 @@ description: >-
   their workflows and customer experiences. The APEX platform supports 99.95% uptime and covers multiple product lines
   across technology, real estate, auto, and retail industries.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/assurant.png
 tags:
   - Insurance
   - Device Protection
@@ -21,41 +34,70 @@ created: '2024-01-15'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: assurant:apex-insurance-api
-    name: Assurant APEX Embedded Insurance API
-    description: >-
-      The Assurant APEX (Assurant Product Experience Exchange) platform provides embedded insurance APIs that enable
-      partners to integrate protection products, claims management, and diagnostics into their workflows. The scalable
-      API platform supports 99.95% uptime and covers product lines including device protection, renter's insurance, auto
-      F&I products, and connected living services across multiple industries.
-    humanURL: https://www.assurant.com/partner-with-us/apex
-    baseURL: https://api-prod.portal.assurant.com
-    tags:
-      - Claims
-      - Device Protection
-      - Embedded Insurance
-      - Insurance
-    properties:
-      - type: Documentation
-        url: https://www.assurant.com/partner-with-us/apex
-      - type: OpenAPI
-        url: openapi/assurant-apex-insurance-api-openapi.yml
-  - aid: assurant:global-housing-api
-    name: Assurant Global Housing API
-    description: >-
-      The Assurant Global Housing API provides property management companies and housing partners with programmatic
-      access to insurance products including renter's insurance, lender-placed insurance, and property preservation
-      services. The API enables seamless integration of housing protection solutions into partner platforms.
-    humanURL: https://www.assurant.com/partner-with-us/apex/global-housing
-    baseURL: https://housing-apis.developer.assurant.com
-    tags:
-      - Housing
-      - Insurance
-      - Property
-      - Renters Insurance
-    properties:
-      - type: Documentation
-        url: https://www.assurant.com/partner-with-us/apex/global-housing
+- aid: assurant:global-housing-api
+  name: Assurant Global Housing API
+  description: >-
+    The Assurant Global Housing API provides property management companies and housing partners with programmatic
+    access to insurance products including renter's insurance, lender-placed insurance, and property preservation
+    services. The API enables seamless integration of housing protection solutions into partner platforms.
+  humanURL: https://www.assurant.com/partner-with-us/apex/global-housing
+  baseURL: https://housing-apis.developer.assurant.com
+  tags:
+  - Housing
+  - Insurance
+  - Property
+  - Renters Insurance
+  properties:
+  - type: Documentation
+    url: https://www.assurant.com/partner-with-us/apex/global-housing
+- aid: assurant:assurant-claims-api
+  name: Assurant Claims API
+  description: Claims filing and management
+  humanURL: https://www.assurant.com/partner-with-us/apex
+  baseURL: https://api-prod.portal.assurant.com
+  tags:
+  - Claims
+  properties:
+  - type: OpenAPI
+    url: openapi/assurant-claims-api-openapi.yml
+  - type: Documentation
+    url: https://www.assurant.com/partner-with-us/apex
+- aid: assurant:assurant-enrollments-api
+  name: Assurant Enrollments API
+  description: Customer enrollment operations
+  humanURL: https://www.assurant.com/partner-with-us/apex
+  baseURL: https://api-prod.portal.assurant.com
+  tags:
+  - Enrollments
+  properties:
+  - type: OpenAPI
+    url: openapi/assurant-enrollments-api-openapi.yml
+  - type: Documentation
+    url: https://www.assurant.com/partner-with-us/apex
+- aid: assurant:assurant-policies-api
+  name: Assurant Policies API
+  description: Insurance policy management
+  humanURL: https://www.assurant.com/partner-with-us/apex
+  baseURL: https://api-prod.portal.assurant.com
+  tags:
+  - Policies
+  properties:
+  - type: OpenAPI
+    url: openapi/assurant-policies-api-openapi.yml
+  - type: Documentation
+    url: https://www.assurant.com/partner-with-us/apex
+- aid: assurant:assurant-products-api
+  name: Assurant Products API
+  description: Insurance product catalog
+  humanURL: https://www.assurant.com/partner-with-us/apex
+  baseURL: https://api-prod.portal.assurant.com
+  tags:
+  - Products
+  properties:
+  - type: OpenAPI
+    url: openapi/assurant-products-api-openapi.yml
+  - type: Documentation
+    url: https://www.assurant.com/partner-with-us/apex
 common:
   - type: AgenticAccess
     url: agentic-access/assurant-agentic-access.yml
