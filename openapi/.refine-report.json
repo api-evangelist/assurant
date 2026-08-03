@@ -1,0 +1,20 @@
+{
+  "provider": "assurant",
+  "sources": [
+    "assurant-claims-api-openapi.yml",
+    "assurant-enrollments-api-openapi.yml",
+    "assurant-policies-api-openapi.yml",
+    "assurant-products-api-openapi.yml"
+  ],
+  "outputs": [
+    "assurant-claims-api-openapi.yml",
+    "assurant-enrollments-api-openapi.yml",
+    "assurant-policies-api-openapi.yml",
+    "assurant-products-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
