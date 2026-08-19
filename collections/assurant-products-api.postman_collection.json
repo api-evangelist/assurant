@@ -1,0 +1,182 @@
+{
+  "item": [
+    {
+      "id": "4ab6d0e2-ae27-4fe1-95e1-96d51b21eb99",
+      "name": "Products",
+      "description": {
+        "content": "Insurance product catalog",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "32660c72-c2f1-4a0e-b467-bc1cbcafd304",
+          "name": "List insurance products",
+          "request": {
+            "name": "List insurance products",
+            "description": {
+              "content": "Retrieve available insurance and protection products.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "products"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "category",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f9bcc1b9-d8f7-47f2-86cd-fa7df9cfa597",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "category",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"products\": [\n    {\n      \"productId\": \"string\",\n      \"name\": \"string\",\n      \"category\": \"string\",\n      \"description\": \"string\",\n      \"pricing\": {\n        \"amount\": 1737.4426738093707,\n        \"currency\": \"string\"\n      }\n    },\n    {\n      \"productId\": \"string\",\n      \"name\": \"string\",\n      \"category\": \"string\",\n      \"description\": \"string\",\n      \"pricing\": {\n        \"amount\": 1904.8463257171989,\n        \"currency\": \"string\"\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e4db8702-48ac-4e74-b65d-2a9289596aab",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "category",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api-prod.portal.assurant.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-Key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "c0c6fcc6-e4a3-4955-a819-afbbc6c3173e",
+    "name": "Assurant APEX Embedded Insurance Claims Products API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Assurant APEX (Assurant Product Experience Exchange) platform provides embedded insurance APIs that enable partners to integrate protection products, claims management, and diagnostics into their workflows. The scalable API platform supports 99.95% uptime and covers multiple product lines across various industries.\n\nContact Support:\n Name: Assurant Developer Portal",
+      "type": "text/plain"
+    }
+  }
+}

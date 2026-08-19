@@ -1,0 +1,195 @@
+{
+  "item": [
+    {
+      "id": "a3a1c77d-fe98-440e-8e9e-e818b94fb983",
+      "name": "Enrollments",
+      "description": {
+        "content": "Customer enrollment operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "400f8331-51d6-4bf5-8266-da5b774fcdf1",
+          "name": "Create enrollment",
+          "request": {
+            "name": "Create enrollment",
+            "description": {
+              "content": "Enroll a customer in an insurance or protection product.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "enrollments"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"productId\": \"<string>\",\n  \"customerId\": \"<string>\",\n  \"effectiveDate\": \"<date>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "cf5a214f-6140-4f7e-ae3f-5337c779e95d",
+              "name": "Enrollment created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "enrollments"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"productId\": \"<string>\",\n  \"customerId\": \"<string>\",\n  \"effectiveDate\": \"<date>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"enrollmentId\": \"string\",\n  \"productId\": \"string\",\n  \"customerId\": \"string\",\n  \"status\": \"string\",\n  \"effectiveDate\": \"1974-05-09\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "83d5ca3f-1c05-4a56-95c4-3586a6f4d644",
+              "name": "Bad request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "enrollments"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"productId\": \"<string>\",\n  \"customerId\": \"<string>\",\n  \"effectiveDate\": \"<date>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api-prod.portal.assurant.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-Key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "3f9f931b-eb84-4890-9346-fd85195d25b8",
+    "name": "Assurant APEX Embedded Insurance Claims Enrollments API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Assurant APEX (Assurant Product Experience Exchange) platform provides embedded insurance APIs that enable partners to integrate protection products, claims management, and diagnostics into their workflows. The scalable API platform supports 99.95% uptime and covers multiple product lines across various industries.\n\nContact Support:\n Name: Assurant Developer Portal",
+      "type": "text/plain"
+    }
+  }
+}
