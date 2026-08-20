@@ -92,6 +92,8 @@ apis:
   humanURL: https://www.assurant.com/partner-with-us/apex
   baseURL: https://api-prod.portal.assurant.com
   tags:
+  - Product
+  tags_raw:
   - Products
   properties:
   - type: OpenAPI
