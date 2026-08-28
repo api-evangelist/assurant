@@ -9,6 +9,18 @@ description: >-
   their workflows and customer experiences. The APEX platform supports 99.95% uptime and covers multiple product lines
   across technology, real estate, auto, and retail industries.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
