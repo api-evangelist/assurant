@@ -113,6 +113,9 @@ apis:
   - type: Documentation
     url: https://www.assurant.com/partner-with-us/apex
 common:
+  - type: CapabilityMap
+    url: capabilities/assurant-capability-edges.yml
+    name: Assurant Business Capability Map
   - type: AgenticAccess
     url: agentic-access/assurant-agentic-access.yml
   - type: DomainSecurity

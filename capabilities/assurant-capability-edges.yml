@@ -1,0 +1,43 @@
+slug: assurant
+provider: Assurant
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Insurance
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 3
+edges:
+- tag: Claims
+  spec_file: assurant-claims-api-openapi.yml
+  capability_id: BC-2160.10
+  capability_id_l1: BC-2160
+  capability_name: First Notice of Loss Management
+  confidence: 0.78
+  evidence: POST /claims  fileClaim  File a claim; GET /claims/{claimId}  getClaim  Get claim status
+  reason: Filing a claim against an embedded protection product and retrieving its status is insurance
+    claims intake (first notice of loss) plus status lookup; L2 FNOL is the closest fit for the filing
+    operation.
+- tag: Products
+  spec_file: assurant-products-api-openapi.yml
+  capability_id: BC-2100.10
+  capability_id_l1: BC-2100
+  capability_name: Insurance Product Catalogue Management
+  confidence: 0.78
+  evidence: 'GET /products  listProducts  List insurance products; schemas: Product'
+  reason: Retrieval of the catalogue of available insurance/protection products for partner integration
+    maps to insurance product catalogue management.
+- tag: Policies
+  spec_file: assurant-policies-api-openapi.yml
+  capability_id: BC-2140
+  capability_id_l1: BC-2140
+  capability_name: Policy Administration Management
+  confidence: 0.7
+  evidence: 'GET /policies  listPolicies  List policies; schemas: Policy'
+  reason: Exposes in-force insurance policy records from the embedded insurance platform, which is policy
+    administration; a single read operation does not identify a narrower sub-capability.
