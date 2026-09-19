@@ -81,6 +81,8 @@ apis:
   humanURL: https://www.assurant.com/partner-with-us/apex
   baseURL: https://api-prod.portal.assurant.com
   tags:
+  - Enrollment
+  tags_raw:
   - Enrollments
   properties:
   - type: OpenAPI
