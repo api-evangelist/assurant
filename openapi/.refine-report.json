@@ -1,10 +1,7 @@
 {
   "provider": "assurant",
   "sources": [
-    "assurant-claims-api-openapi.yml",
-    "assurant-enrollments-api-openapi.yml",
-    "assurant-policies-api-openapi.yml",
-    "assurant-products-api-openapi.yml"
+    "_original/assurant-apex-insurance-api-openapi.yml"
   ],
   "outputs": [
     "assurant-claims-api-openapi.yml",
@@ -15,6 +12,15 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "assurant-apex-insurance-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "assurant-claims-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "assurant-enrollments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "assurant-policies-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "assurant-products-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

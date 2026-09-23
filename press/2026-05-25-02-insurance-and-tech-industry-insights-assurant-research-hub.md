@@ -1,7 +1,9 @@
 ---
 title: Insurance & Tech Industry Insights | Assurant Research Hub
 url: https://www.assurant.com/industry-insights
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Assurant" press release artificial intelligence'
 position: 2
 source: serpapi-google

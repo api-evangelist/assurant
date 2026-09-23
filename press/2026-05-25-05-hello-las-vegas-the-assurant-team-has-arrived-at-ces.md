@@ -1,7 +1,9 @@
 ---
 title: Hello, Las Vegas! The Assurant team has arrived at CES ...
 url: https://www.facebook.com/AssurantInc/posts/hello-las-vegas-the-assurant-team-has-arrived-at-ces-2026-and-is-ready-to-share-/1321253986709533/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Assurant" press release artificial intelligence'
 position: 5
 source: serpapi-google

@@ -1,7 +1,9 @@
 ---
 title: 'Building Trust in Enterprise AI: a Human-Centric Approach'
 url: https://www.assurant.com/news-insights/articles/human-approach-to-enterprise-ai
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Assurant" press release artificial intelligence'
 position: 3
 source: serpapi-google
