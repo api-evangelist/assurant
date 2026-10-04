@@ -39,6 +39,19 @@ paths:
           description: Bad request
 components:
   schemas:
+    EnrollmentRequest:
+      type: object
+      required:
+      - productId
+      - customerId
+      properties:
+        productId:
+          type: string
+        customerId:
+          type: string
+        effectiveDate:
+          type: string
+          format: date
     Enrollment:
       type: object
       properties:
@@ -49,19 +62,6 @@ components:
         customerId:
           type: string
         status:
-          type: string
-        effectiveDate:
-          type: string
-          format: date
-    EnrollmentRequest:
-      type: object
-      required:
-      - productId
-      - customerId
-      properties:
-        productId:
-          type: string
-        customerId:
           type: string
         effectiveDate:
           type: string

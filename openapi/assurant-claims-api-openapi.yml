@@ -61,6 +61,19 @@ paths:
           description: Claim not found
 components:
   schemas:
+    ClaimRequest:
+      type: object
+      required:
+      - policyId
+      - description
+      properties:
+        policyId:
+          type: string
+        description:
+          type: string
+        incidentDate:
+          type: string
+          format: date
     Claim:
       type: object
       properties:
@@ -79,19 +92,6 @@ components:
         description:
           type: string
         filedDate:
-          type: string
-          format: date
-    ClaimRequest:
-      type: object
-      required:
-      - policyId
-      - description
-      properties:
-        policyId:
-          type: string
-        description:
-          type: string
-        incidentDate:
           type: string
           format: date
   securitySchemes:
