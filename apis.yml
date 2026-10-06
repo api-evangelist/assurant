@@ -44,7 +44,7 @@ tags:
   - Claims
   - Fortune 500
 created: '2024-01-15'
-modified: '2026-05-19'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
 - aid: assurant:global-housing-api
@@ -116,6 +116,8 @@ apis:
   - type: Documentation
     url: https://www.assurant.com/partner-with-us/apex
 common:
+  - url: https://www.assurant.com/newsroom
+    type: Blog
   - type: Website
     url: https://www.assurant.com/
   - type: CapabilityMap
