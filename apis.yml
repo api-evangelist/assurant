@@ -116,6 +116,12 @@ apis:
   - type: Documentation
     url: https://www.assurant.com/partner-with-us/apex
 common:
+  - type: Plans
+    url: plans/assurant-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/assurant-rate-limits.yml
+  - type: FinOps
+    url: finops/assurant-finops.yml
   - url: https://www.assurant.com/newsroom
     type: Blog
   - type: Website
