@@ -15,3 +15,16 @@
   relationship: carrier-coverage
   status: not-a-workflow
   arazzo: null
+- slug: assurant-guidewire-own
+  label: Guidewire (own)
+  partner: guidewire
+  partner_name: Guidewire (own)
+  category: Accelerator; Claim Disbursements;Customer Experience Management; ClaimCenter
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://marketplace.guidewire.com/product/01tKj00000PwRBiIAN/01tKj00000PwRBiIAN
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
