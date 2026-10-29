@@ -1,4 +1,4 @@
-# Assurant (assurant)
+# Assurant
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,80 +66,122 @@
 
 Assurant is a global provider of lifestyle and housing solutions that help people thrive in a connected world. The company provides protection products and services including device protection, renter's insurance, auto F&I products, and connected living services. Assurant's APEX (Assurant Product Experience Exchange) platform provides embedded insurance APIs that enable partners to integrate protection products, claims management, and diagnostics directly into their workflows and customer experiences. The APEX platform supports 99.95% uptime and covers multiple product lines across technology, real estate, auto, and retail industries.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/assurant/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/assurant/refs/heads/main/apis.yml)
+**Areas:** Insurance · Device Protection · Embedded Insurance · Housing · Claims · Fortune 500
 
-## Scope
+## Assurant on APIs.io
 
-- **Type:** Index
+Everything profiled for Assurant is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/assurant/](https://apis.io/providers/assurant/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (5)
 
-- Insurance
-- Device Protection
-- Embedded Insurance
-- Housing
-- Claims
+- [Assurant Global Housing API](https://apis.io/apis/assurant/global-housing-api/) — The Assurant Global Housing API provides property management companies and housing partners with programmatic access to insurance products including…
+- [Assurant Claims API](https://apis.io/apis/assurant/assurant-claims-api/) — Claims filing and management
+- [Assurant Enrollments API](https://apis.io/apis/assurant/assurant-enrollments-api/) — Customer enrollment operations
+- [Assurant Policies API](https://apis.io/apis/assurant/assurant-policies-api/) — Insurance policy management
+- [Assurant Products API](https://apis.io/apis/assurant/assurant-products-api/) — Insurance product catalog
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-01-15
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Assurant APEX Embedded Insurance API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Assurant APEX (Assurant Product Experience Exchange) platform provides embedded insurance APIs that enable partners to integrate protection products, claims management, and diagnostics into their workflows. The scalable API platform supports 99.95% uptime and covers product lines including device protection, renter's insurance, auto F&I products, and connected living services across multiple industries.
+- [Assurant Agentic Access](https://apis.io/agentic-access/assurant/assurant-agentic-access/)
 
-- **Human URL:** [https://www.assurant.com/partner-with-us/apex](https://www.assurant.com/partner-with-us/apex)
-- **Base URL:** `https://api-prod.portal.assurant.com`
+#### Collections (5)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Claims
-- Device Protection
-- Embedded Insurance
-- Insurance
+- [Assurant APEX Embedded Insurance API](https://apis.io/collections/assurant/open-assurant-apex-insurance-api/)
+- [Assurant APEX Embedded Insurance Claims API](https://apis.io/collections/assurant/open-assurant-claims-api/)
+- [Assurant APEX Embedded Insurance Claims Enrollments API](https://apis.io/collections/assurant/open-assurant-enrollments-api/)
+- [Assurant APEX Embedded Insurance Claims Policies API](https://apis.io/collections/assurant/open-assurant-policies-api/)
+- [Assurant APEX Embedded Insurance Claims Products API](https://apis.io/collections/assurant/open-assurant-products-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://www.assurant.com/partner-with-us/apex)
-- [OpenAPI](openapi/assurant-apex-insurance-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/assurant-apex-insurance-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/assurant-apex-insurance-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-### Assurant Global Housing API
+- [Assurant Authentication](https://apis.io/security/assurant/assurant-authentication/)
+- [Assurant Domain Security](https://apis.io/security/assurant/assurant-domain-security/)
 
-The Assurant Global Housing API provides property management companies and housing partners with programmatic access to insurance products including renter's insurance, lender-placed insurance, and property preservation services. The API enables seamless integration of housing protection solutions into partner platforms.
+#### Plans and pricing (1)
 
-- **Human URL:** [https://www.assurant.com/partner-with-us/apex/global-housing](https://www.assurant.com/partner-with-us/apex/global-housing)
-- **Base URL:** `https://housing-apis.developer.assurant.com`
+Published plans, tiers and prices.
 
-#### Tags
+- [Assurant Plans Pricing](https://apis.io/plans/assurant/assurant-plans-pricing/)
 
-- Housing
-- Insurance
-- Property
-- Renters Insurance
+#### Rate limits (1)
 
-#### Properties
+Published request limits.
 
-- [Documentation](https://www.assurant.com/partner-with-us/apex/global-housing)
-- [Postman Collection](collections/assurant-apex-insurance-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/assurant-apex-insurance-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Assurant Rate Limits](https://apis.io/rate-limits/assurant/assurant-rate-limits/)
 
-## Common Properties
+#### FinOps (1)
 
-- [GitHub Organization](https://github.com/assurantlabs)
-- [LinkedIn](https://www.linkedin.com/company/assurant)
-- [Portal](https://www.assurant.com/)
-- [Portal](https://www.assurant.com/partner-with-us/apex)
-- [Sign Up](https://www.assurant.com/partner-with-us/apex)
-- [Features](undefined)
-- [Use Cases](undefined)
-- [Integrations](undefined)
+What the API costs to run, by operation.
 
-## Maintainers
+- [Assurant Finops](https://apis.io/finops/assurant/assurant-finops/)
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.assurant.com/)
+- [Blog](https://www.assurant.com/newsroom)
+- [GitHub](https://github.com/assurantlabs)
+
+## API Evangelist rating
+
+**Kin Score 29.2** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 47.8 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 33.3 |
+| Access clarity | 21.1 |
+
+**Agent readiness 17.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.5** — Insurance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/assurant/](https://apis.io/providers/assurant/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Assurant: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/assurant/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
